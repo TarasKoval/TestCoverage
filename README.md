@@ -1,8 +1,8 @@
 # User authentication program based on typing dynamics 
 
 The program works in two modes:
-- learning (creating a biometric reference)
-- identification (comparison with the biometric standard).
+- learning (creating the biometric identifier)
+- identification (comparison with the biometric identifier).
 
 You can read full task in readme.pdf file (Ukrainian language)
 
