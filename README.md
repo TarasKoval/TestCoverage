@@ -1,5 +1,22 @@
 # User authentication program based on typing dynamics 
 
+### Target platform: Ubuntu 16.04
+
+Language: C++11 compiled under GCC 5.4.0 using CMake 3.5.2
+
+## Installing
+
+In bash:
+
+```
+    cmake ./CMakeLists.txt
+    make
+```
+
+The executable will be placed in "build" folder.
+
+## Brief description
+
 The program works in two modes:
 - learning (creating the biometric identifier)
 - identification (comparison with the biometric identifier).
