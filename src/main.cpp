@@ -1,5 +1,5 @@
 #include <QtWidgets>
-#include "startwindow.h"
+#include "include/startwindow.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);

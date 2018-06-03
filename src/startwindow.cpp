@@ -1,4 +1,4 @@
-#include "startwindow.h"
+#include "include/startwindow.h"
 
 startWindow::startWindow(QWidget *obj) : QMainWindow(obj),
                                          buttonLogIn(nullptr), buttonSignUp(nullptr), login(nullptr) {
@@ -47,7 +47,7 @@ startWindow::startWindow(QWidget *obj) : QMainWindow(obj),
 void startWindow::openInputWindow() {
     if (buttonLogIn->isChecked()) {
 
-        QFile file1(QString("../data/" + login->text() + ".txt"));
+        QFile file1(QString("../resources/" + login->text() + ".txt"));
         if (!file1.open(QIODevice::ReadOnly)) {
             QMessageBox::warning(this, "Error", "This user is not registered!");
             login->setFocus();
@@ -60,7 +60,7 @@ void startWindow::openInputWindow() {
         }
     } else {
 
-        QFile file1(QString("../data/" + login->text() + ".txt"));
+        QFile file1(QString("../resources/" + login->text() + ".txt"));
         if (!file1.open(QIODevice::ReadOnly)) {
             file1.close();
             hide();

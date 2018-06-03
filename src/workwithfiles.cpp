@@ -1,10 +1,10 @@
-#include "workwithfiles.h"
+#include "include/workwithfiles.h"
 
 #include <QFile>
 #include <QDebug>
 
 void Write(QString fileName, const std::vector<ulong> &outputData) {
-    QString path = "../data/" + fileName + ".txt";
+    QString path = "../resources/" + fileName + ".txt";
     QFile myFile(path);
     if (!myFile.open(QFile::WriteOnly | QFile::Text)) {
         qDebug() << "from Write";
@@ -24,7 +24,7 @@ void Write(QString fileName, const std::vector<ulong> &outputData) {
 }
 
 void Read(QString fileName, std::vector<ulong> &outputData) {
-    QString path = "../data/" + fileName + ".txt";
+    QString path = "../resources/" + fileName + ".txt";
     QFile myFile(path);
     if (!myFile.open(QFile::ReadOnly | QFile::Text)) {
         qDebug() << "from Read";

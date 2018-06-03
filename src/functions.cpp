@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "include/functions.h"
 
 double mathExpectation(const std::vector<ulong> &inputData, unsigned long gapPosition) {
     double mathematicalExpectation = 0;

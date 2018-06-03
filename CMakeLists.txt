@@ -30,14 +30,21 @@ set(CMAKE_AUTOMOC ON)
 
 # Source files
 set(SOURCES
-        main.cpp
-        functions.cpp
-        inputwindow.cpp
-        mylineedit.cpp
-        startwindow.cpp
-        workwithfiles.cpp
+        src/main.cpp
+        src/functions.cpp
+        src/inputwindow.cpp
+        src/mylineedit.cpp
+        src/startwindow.cpp
+        src/workwithfiles.cpp
         )
 
+set(HEADERS
+        include/functions.h
+        include/inputwindow.h
+        include/mylineedit.h
+        include/startwindow.h
+        include/workwithfiles.h
+        )
 
 # Shared libraries
 set(LIBRARIES
@@ -45,7 +52,7 @@ set(LIBRARIES
         )
 
 # Set target
-add_executable(AuthenticationProgram ${SOURCES} ${HEADERS} ${UIC_SOURCES} ${RCC_SOURCES})
+add_executable(AuthenticationProgram ${SOURCES} ${HEADERS})
 
 # Link with libraries
 target_link_libraries(AuthenticationProgram ${LIBRARIES})

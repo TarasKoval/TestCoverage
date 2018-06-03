@@ -1,7 +1,6 @@
 #ifndef RRORELCALC_FUNCTIONS_H
 #define RRORELCALC_FUNCTIONS_H
 
-
 #include <vector>
 #include <zconf.h>
 #include <iostream>
