@@ -10,7 +10,7 @@ include(GoogleTest)
 
 include_directories(include)
 
-add_executable(${PROJECT_NAME} src/tests.cpp src/functions.cpp src/test2.cpp)
+add_executable(${PROJECT_NAME} tests/test1.cpp src/functions.cpp tests/test2.cpp)
 target_link_libraries(${PROJECT_NAME} gtest gtest_main)
 
 if (CodeCoverage MATCHES ON)
