@@ -22,6 +22,9 @@ add_subdirectory("${CMAKE_BINARY_DIR}/googletest-src"
 include_directories("${gtest_SOURCE_DIR}/include"
         "${gmock_SOURCE_DIR}/include")
 
+#include header directory
+include_directories(include)
+
 # Now simply link your own targets against gtest, gmock and etc. as appropriate
-add_executable(AuthenticationProgram src/tests.cpp)
+add_executable(AuthenticationProgram src/tests.cpp src/functions.cpp)
 target_link_libraries(AuthenticationProgram gtest gtest_main)
