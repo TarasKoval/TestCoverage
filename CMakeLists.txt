@@ -10,11 +10,16 @@ include(GoogleTest)
 
 include_directories(include)
 
-add_executable(${PROJECT_NAME} tests/test1.cpp src/functions.cpp tests/test2.cpp)
+add_executable(${PROJECT_NAME}
+        src/functions.cpp
+        tests/test1.cpp
+        tests/test2.cpp
+        )
+
 target_link_libraries(${PROJECT_NAME} gtest gtest_main)
 
 if (CodeCoverage MATCHES ON)
     set(CMAKE_CXX_FLAGS "-std=c++11 -O0 -g -fprofile-arcs -ftest-coverage ")
     include(CodeCoverage)
-    setup_target_for_coverage(${PROJECT_NAME}_coverage tests coverage)
+    setup_target_for_coverage(${PROJECT_NAME}_coverage ${PROJECT_NAME} coverage)
 endif ()
